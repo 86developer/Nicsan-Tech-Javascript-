@@ -1,0 +1,73 @@
+           Git 
+           Comandos Principales
+-----------------------------------------------------------------------------------------------------------------------------------
+
+    
+    **TOMAR CAMBIOS DE MAIN**
+
+Estando en su rama ejecutar en consola:
+
+git status
+    -Permite ver el estado antes de operar comandos.
+
+git fetch origin main 
+
+    -Descarga los últimos cambios del repositorio remoto pero no los aplica en tu directorio de trabajo local ni en tu rama local. Esto te permite ver qué cambios han ocurrido en el repositorio remoto sin necesidad de fusionarlos inmediatamente en tu rama local
+
+git merge origin/main 
+
+    -Fusiona la historia de la rama especificada en tu rama actual. Si la fusión se realiza sin problemas, Git crea un nuevo commit que representa la combinación de ambas ramas.
+    Si hay conflictos durante la fusión, Git te notificará sobre estos conflictos y te pedirá que los resuelvas manualmente antes de que puedas completar la fusión. Una vez que resuelvas los conflictos y hagas los cambios necesarios, puedes finalizar la fusión y hacer un nuevo commit para confirmar la fusión.
+
+Asegurense de resolver cualquier conflicto que pueda surgir durante la fusión.
+
+    **SUBIR CAMBIOS **
+
+Después de resolver los conflictos y realizar los cambios y haber trabajado con el codigo, pueden subirlos a la rama remota "nombre de su rama" ejecutando:
+git status
+    -Permite ver el estado antes de operar comandos.
+
+git checkout main
+    -Cambio a la rama main remota
+
+git merge "nombre de la rama" 
+    -Fusiona main remota con rama local "nombre de tu rama"
+
+git commit -m "contenido del commit explicando el cambio" 
+    -Comentario explicando los cambios realizados.
+
+git push origin main
+    -Sube los cambios a tu repositorio remoto utilizando
+
+------------------------------------------------------------------------
+Quokka Settings
+
+Quokka on an existing file, use Cmd/Ctrl + K, Q.
+To open a new Quokka file use Cmd/Ctrl + K, J for JavaScript, 
+or Cmd/Ctrl + K, T for TypeScript. To start/restart
+
+// Comentarios
+//* Resaltador
+//! Alertas
+//todo Tareas a cumplir
+//? Switches y Shortcuts
+//// Comented out
+
+//* comment
+//? comment
+//! comment
+//TODO comment
+
+//todo (npm plumber sass imagemin cssnano autoprefixer postcss )
+//? npx gulp dev (activa funciones)
+//? alt+shift up down copia linea
+//? alt + up o down mueve linea
+//? ctrl +z ajuste de linea
+
+//? Ctrl + C para detener compilacion en consola
+
+//? shift+alt+A comenta lineas
+
+//? Fn + Ctrl + PgUp o PgDn, cambia hoja 
+
+
