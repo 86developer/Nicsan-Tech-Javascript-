@@ -59,9 +59,13 @@ or Cmd/Ctrl + K, T for TypeScript. To start/restart
 //TODO comment
 
 //todo (npm plumber sass imagemin cssnano autoprefixer postcss )
+
 //? npx gulp dev (activa funciones)
+
 //? alt+shift up down copia linea
+
 //? alt + up o down mueve linea
+
 //? ctrl +z ajuste de linea
 
 //? Ctrl + C para detener compilacion en consola
