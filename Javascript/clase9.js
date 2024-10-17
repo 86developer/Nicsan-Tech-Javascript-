@@ -47,20 +47,20 @@
 //Creacion de elementos en el DOM, un nuevo Parrafo y añadirlo a la pagina
 
 //Seleccionar el contenedor y el boton
-const listaTareas = document.getElementById("listaTareas");
+//const listaTareas = document.getElementById("listaTareas");
 
-const botonAgregar = document.getElementById("botonAgregar");
+//const botonAgregar = document.getElementById("botonAgregar");
 
 //Crear un nuevo elemento <li> y agregarlo a la lista
 
-botonAgregar.addEventListener("click", function () {
+// botonAgregar.addEventListener("click", function () {
 
-    const nuevaTarea = document.createElement("li"); // Este metodo crea un nuevo elemento del tipo especificado
+//     const nuevaTarea = document.createElement("li"); // Este metodo crea un nuevo elemento del tipo especificado
 
-    nuevaTarea.textContent = "Nueva tarea dinamica";
+//     nuevaTarea.textContent = "Nueva tarea dinamica";
 
-    listaTareas.appendChild(nuevaTarea);
-});
+//     listaTareas.appendChild(nuevaTarea);
+// });
 
 //document.createElement(): Crea un nuevo elemento del tipo especificado (en este caso, un <li>).
 //appendChild(): Agrega el nuevo elemento como hijo del elemento seleccionado (listaTareas).
@@ -70,14 +70,52 @@ botonAgregar.addEventListener("click", function () {
 //También podemos eliminar elementos cuando ya no son necesarios usando remove().
 
 // Eliminar el primer elemento de la lista
-const primerElemento = document.querySelector("li");
-primerElemento.remove();
+// const primerElemento = document.querySelector("li");
+// primerElemento.remove();
 
 
-//?Actividad práctica avanzada (30 minutos): Crear una lista de tareas dinámica
+//?Actividad práctica avanzada: Crear una lista de tareas dinámica
 
 //Instrucciones:
 //Crear un campo de texto donde el usuario pueda escribir una nueva tarea.
 //Al hacer clic en el botón "Agregar", se debe agregar la nueva tarea a una lista.
 //Cada tarea debe tener un botón de eliminar que permita eliminarla de la lista.
 
+//Seleccionar elementos del DOM
+
+const inputTarea = document.getElementById("nuevaTarea");
+const botonAgregar = document.getElementById("agregarTarea");
+const listaTareas = document.getElementById("listaTareas");
+
+//Funcion para agregar una nueva tarea
+
+botonAgregar.addEventListener("click", function () {
+    const textoTarea = inputTarea.value.trim();
+
+    if (textoTarea === "") {
+        alert("Escribe una tarea.");
+        return;
+    }
+
+    //Crear un nuevo elemento <li> para la tarea
+    const nuevaTarea = document.createElement("li");
+    nuevaTarea.textContent = textoTarea;
+
+    //Creamos boton para eliminar la tarea
+    const botonEliminar = document.createElement("button");
+    botonEliminar.textContent = "Eliminar";
+    botonEliminar.addEventListener("click", function () {
+        nuevaTarea.remove(); //Eliminamos tarea
+    });
+
+    //Agregar el boton de eliminar a la tarea
+    nuevaTarea.appendChild(botonEliminar);
+
+    //Agregar la nueva tarea a la lista
+    listaTareas.appendChild(nuevaTarea);
+
+    //Limpiar el campo de entrada
+    inputTarea.value = "";
+
+
+});
