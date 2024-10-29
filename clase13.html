@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List Asíncrona con API</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        #nuevaTarea {
+            padding: 10px;
+            font-size: 16px;
+            width: 250px;
+        }
+
+        #agregarTarea,
+        #cargarTareasAPI {
+            padding: 10px;
+            font-size: 16px;
+            margin: 5px;
+            cursor: pointer;
+            color: white;
+        }
+
+        #agregarTarea {
+            background-color: #28a745;
+            border: none;
+        }
+
+        #cargarTareasAPI {
+            background-color: #007bff;
+            border: none;
+        }
+
+        #agregarTarea:hover {
+            background-color: #218838;
+        }
+
+        #cargarTareasAPI:hover {
+            background-color: #0069d9;
+        }
+
+        #listaTareas {
+            list-style-type: none;
+            padding: 0;
+            margin-top: 20px;
+        }
+
+        li {
+            background-color: white;
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 4px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        button {
+            background-color: #dc3545;
+            color: white;
+            border: none;
+            cursor: pointer;
+            padding: 5px 10px;
+        }
+
+        button:hover {
+            background-color: #c82333;
+        }
+
+        #mensaje {
+            margin-top: 10px;
+            color: #007bff;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Lista de Tareas Asíncrona con API</h1>
+
+    <!-- Input para escribir la nueva tarea -->
+    <input type="text" id="nuevaTarea" placeholder="Escribe una nueva tarea">
+
+    <!-- Botón para agregar una nueva tarea -->
+    <button id="agregarTarea">Agregar tarea</button>
+
+    <!-- Botón para cargar tareas desde la API -->
+    <button id="cargarTareasAPI">Cargar Tareas desde API</button>
+
+    <!-- Mensaje de estado para la simulación de asincronía -->
+    <p id="mensaje"></p> <!-- Este es el párrafo para mostrar mensajes de estado -->
+
+    <!-- Lista para mostrar las tareas -->
+    <ul id="listaTareas"></ul>
+
+    <script src="./Javascript/clase13.js"></script>
+</body>
+
+</html>
